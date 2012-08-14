@@ -1,2 +1,13 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, 'Contact') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kidtunes | <%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>Contact</h1>
+    <p>
+    Interested in kidtunes, you can contact me <a href="http://refford.com/about">here</a>.
+    </p>
+  </body>
+</html>

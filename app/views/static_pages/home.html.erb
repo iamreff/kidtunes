@@ -1,2 +1,13 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kidtunes | <%=yield(:title) %> </title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <p>
+    This is the home for the kidtunes. Where kids can ask their parents to buy them songs and apps from iTunes.
+    </p>
+  </body>
+</html>
