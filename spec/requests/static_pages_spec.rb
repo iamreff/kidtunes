@@ -4,43 +4,58 @@ describe "Static Pages" do
 
   describe "Home page" do
 
-    it "should have the h1 'Home'" do
+    it "should have the h1 'kidtunes'" do
       visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'Home')
+      page.should have_selector('h1', :text => 'kidtunes')
     end
 
-    it "should have the title 'Home'" do
+    it "should have the base title " do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => "kidtunes | Home")
+      page.should have_selector('title', :text => "kidtunes")
     end
+  end
+
+  it "should not have a custom page title" do
+    visit '/static_pages/home'
+    page.should have_selector('title', :text => "kidtunes")
   end
 
   describe "Help page" do
 
-    it "should have the h1 'Help'" do
+    it "should have the h1 'kidtunes'" do
       visit '/static_pages/help'
-      page.should have_selector('h1', :text => 'Help')
+      page.should have_selector('h1', :text => 'kidtunes')
     end
 
-    it "should have the title 'Help'" do
+    it "should have the base title " do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => "kidtunes | Help")
+      page.should have_selector('title', :text => "kidtunes")
     end
   end
+  
+  it "should not have a custom page title" do
+    visit '/static_pages/help'
+    page.should have_selector('title', :text => "kidtunes")
+  end
+
 
   describe "Contact page" do
 
-    it "should have the h1 'Contact'" do
+    it "should have the h1 'kidtunes'" do
       visit '/static_pages/contact'
-      page.should have_selector('h1', :text => 'Contact')
+      page.should have_selector('h1', :text => 'kidtunes')
     end
 
-    it "should have the title 'Contact'" do
+    it "should have the base title " do
       visit '/static_pages/contact'
-      page.should have_selector('title', :text => "kidtunes | Contact")
+      page.should have_selector('title', :text => "kidtunes")
     end
+
   end
-
+  it "should not have a custom page title" do
+    visit '/static_pages/contact'
+    page.should have_selector('title', :text => "kidtunes")
+  end
 
 end
 
