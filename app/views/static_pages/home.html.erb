@@ -1,13 +1,8 @@
-<% provide(:title, 'Home') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %> </title>
-  </head>
-  <body>
-    <h1>kidtunes</h1>
-    <p>
-    This is the home for the kidtunes. Where kids can ask their parents to buy them songs and apps from iTunes.
-    </p>
-  </body>
-</html>
+<title><%= full_title(yield(:title)) %> </title>
+<div class="Center her-unit">
+  <h1>Welcome to kidtunes</h1>
+  
+  <h2>This is the home page for kidtunes</h2>
+    Where kids can ask their parents to buy them songs and apps from iTunes.
+    <%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %> 
+</div>
