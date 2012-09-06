@@ -34,4 +34,11 @@ Kidtunes::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Added to fix "lazy loading" and support single table inheritance 
+  config.to_prepare {
+  %w[asset unix_asset host ads_host].each do |c|
+  require_dependency File.join("app","models","#{c}.rb")
+  end
+  }
 end
