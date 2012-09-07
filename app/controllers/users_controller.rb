@@ -12,7 +12,12 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "Welcome to kidtunes!"
-      redirect_to @user
+      puts @user.type
+      if (@user.type == "Kid")
+        redirect_to kid_path(@user) 
+      else
+	redirect_to parent_path(@user)
+      end
     else
       render 'new'
     end

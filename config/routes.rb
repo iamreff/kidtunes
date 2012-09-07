@@ -1,6 +1,10 @@
 Kidtunes::Application.routes.draw do
 
-  resources :users
+  get "parents/new"
+
+  get "kids/new"
+
+  resources :users, :kids, :parents
 
   root to: 'static_pages#home'
 

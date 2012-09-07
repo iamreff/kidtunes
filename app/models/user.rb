@@ -15,9 +15,6 @@ class User < ActiveRecord::Base
   attr_accessible :fname, :lname, :email, :type, :password, :password_confirmation
   has_secure_password
 
-User
-Kid
-
   before_save { |user| user.email = email.downcase }
 
   validates :fname, presence: true, length: { maximum: 30 }
