@@ -18,8 +18,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    puts "WOOOOOOOO!"
-    puts "at sign out"
     sign_out
     redirect_to root_path
 #    redirect_to root_path(@user)
